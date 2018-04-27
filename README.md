@@ -1,20 +1,22 @@
 Force Paste.app
 ===============
 
-### [DOWNLOAD](https://github.com/EugeneDae/Force-Paste/releases/download/1.0.1/Force-Paste.zip) 
-(ZIP, ≈15KB). See also [related blog post and discussion](http://d43.me/blog/1741/paste-text-even-when-prohibited-in-os-x-password-dialogs-etc/).
-
 Little AppleScript application for OS X which allows pasting text even when it’s not allowed (password dialogs etc). It uses virtual keyboard to type in the text from your clipboard. In other words, it tricks the program that asks for your input into thinking that you’re actually typing on your keyboard.
 
-Use from the Dock or Scripts menu.
-![How it works](https://raw.githubusercontent.com/EugeneDae/Force-Paste/master/about.jpg)
+### Configuration (main.scpt)
+- Make sure you have a keychain entry for the account name you specify in `getPW("mykeychainaccount")`
+- Make sure you set the proper user in `keystroke "myUser"`
+- Optionally uncomment `-- keystroke RETURN` so that it hits return for you.  If you have the wrong window focused, just as a google search or a chat, I warned you.
 
 ### Building
 ```
 cd Force-Paste/
 ./build.sh
 ```
-Pull requests are welcome.
+
+### Install
+Drag to your dock and click whenever you have a user/pass field focused.
+You will need to enter your keychain credentials the first time, but if you remember then it will save you from having to repeat your password.
 
 ### Copyrights
 Icons by [Tango Project](http://tango.freedesktop.org/) and [Alexandre Moore](http://sa-ki.deviantart.com/).
